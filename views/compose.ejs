@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compose</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <%- include("partials/header") -%>
+    <main>
+        <h1>Compose</h1>
+        <section>
+            <form action="/" method="post">
+                <h3>Title</h3>
+                <input type="text" name="title">
+                <br>
+                <h3>Content</h3>
+                <textarea name="content"></textarea>
+                <br>
+                <button type="submit">Publish</button>
+            </form>
+        </section>
+    </main>
+    <%- include("partials/footer") -%>
+</body>
+</html>
