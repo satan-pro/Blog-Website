@@ -11,8 +11,13 @@ app.set('view engine', 'ejs');
 
 app.use(express.static(__dirname+"/public"));
 
+let date = new Date;
+let currDay = date.toLocaleString("en-us", {day:"2-digit"});
+let currMonth = date.toLocaleString("en-us", {month:"short"});
+let currYear = date.toLocaleString("en-us", {year:"numeric"});
+
 app.get("/", function(req, res){
-    res.render('home',{post:post});
+    res.render('home',{post:post, day:currDay, month:currMonth, year:currYear});
 });
 
 app.post("/", function(req, res){
